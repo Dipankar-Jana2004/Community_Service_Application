@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+import loginImage from "../assets/login-image.jpeg";
+
 import "./Login.css";
 
 function Login() {
@@ -71,12 +75,13 @@ function Login() {
       <main className="login-container">
         <div className="login-card">
           <div className="login-image-section">
-            <img src="/src/assets/login-image.jpeg" alt="Login" />
+            <img src={loginImage} alt="Login" />
           </div>
 
           <div className="login-form-section">
             <h1>
-              Welcome Back <span className="hello-icon">👋</span>
+              Welcome Back
+              <span className="hello-icon">👋</span>
             </h1>
 
             <p className="login-subtitle">
