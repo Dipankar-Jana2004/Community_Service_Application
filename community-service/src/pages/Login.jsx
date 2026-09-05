@@ -62,10 +62,6 @@ function Login() {
     navigate("/");
   };
 
-  const handleGoogleLogin = () => {
-    window.open("https://accounts.google.com/ServiceLogin", "_blank");
-  };
-
   return (
     <div className="login-page">
       <Navbar />
@@ -148,11 +144,7 @@ function Login() {
               <span>OR</span>
             </div>
 
-            <button
-              type="button"
-              className="google-button"
-              onClick={handleGoogleLogin}
-            >
+            <button type="button" className="google-button">
               <span className="google-icon">G</span>
 
               <span className="google-text">Continue with Google</span>
