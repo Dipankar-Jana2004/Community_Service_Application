@@ -1,0 +1,154 @@
+.booking-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f8ff, #ffffff);
+  color: #20263a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.booking-container {
+  width: 90%;
+  max-width: 650px;
+  margin: 70px auto;
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e5e7ee;
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(40, 30, 80, 0.08);
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eee9ff;
+  color: #6334d5;
+
+  font-size: 36px;
+
+  box-shadow: 0 8px 20px rgba(99, 52, 213, 0.12);
+}
+
+.booking-container h1 {
+  margin: 0 0 10px;
+
+  color: #20263a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.booking-container > p {
+  margin: 0 0 28px;
+
+  color: #747b8c;
+  font-size: 14px;
+}
+
+.booking-details {
+  padding: 20px;
+  margin-bottom: 25px;
+
+  background: #faf9ff;
+  border: 1px solid #e7e2ff;
+  border-radius: 10px;
+
+  text-align: left;
+}
+
+.booking-details p {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eceaf3;
+
+  color: #737a8b;
+  font-size: 13px;
+}
+
+.booking-details p:last-child {
+  border-bottom: none;
+}
+
+.booking-details strong {
+  color: #252b3e;
+  font-weight: 600;
+}
+
+.booking-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  padding: 12px 25px;
+
+  border-radius: 7px;
+
+  background: #6334d5;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.booking-home:hover {
+  background: #5425c4;
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 18px rgba(99, 52, 213, 0.22);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .booking-container {
+    width: calc(100% - 30px);
+    margin: 40px auto;
+    padding: 28px 18px;
+  }
+
+  .success-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+  }
+
+  .booking-container h1 {
+    font-size: 23px;
+  }
+
+  .booking-container > p {
+    font-size: 13px;
+  }
+
+  .booking-details {
+    padding: 15px;
+  }
+
+  .booking-details p {
+    font-size: 12px;
+  }
+
+  .booking-home {
+    width: 100%;
+  }
+}
