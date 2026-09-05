@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
 import loginImage from "../assets/login-image.jpeg";
 
 import "./Login.css";
