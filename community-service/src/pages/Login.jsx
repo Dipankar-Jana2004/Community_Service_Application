@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 import loginImage from "../assets/login-image.jpeg";
 
@@ -163,8 +164,6 @@ function Login() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
