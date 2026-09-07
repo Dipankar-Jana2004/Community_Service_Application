@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 import loginImage from "../assets/login-image.jpeg";
 
@@ -14,7 +13,6 @@ function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -64,7 +62,6 @@ function Login() {
 
   return (
     <div className="login-page">
-      <Navbar />
 
       <main className="login-container">
         <div className="login-card">

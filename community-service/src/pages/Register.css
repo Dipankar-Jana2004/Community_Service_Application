@@ -17,7 +17,7 @@
 
 .register-card {
   width: 100%;
-  min-height: 650px;
+  min-height: 700px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -40,7 +40,7 @@
 
 .register-image-section {
   width: 100%;
-  min-height: 650px;
+  min-height: 700px;
 
   background: #eef0f6;
 
@@ -69,13 +69,13 @@
   flex-direction: column;
   justify-content: center;
 
-  padding: 50px 75px;
+  padding: 45px 70px;
 
   box-sizing: border-box;
 }
 
 .register-form-section h1 {
-  margin: 0 0 9px;
+  margin: 0 0 8px;
 
   color: #20263a;
 
@@ -86,34 +86,36 @@
 }
 
 .register-subtitle {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
 
   color: #7b8190;
 
   font-size: 13px;
+
   line-height: 1.5;
 }
 
-.register-form-section .form-group {
-  margin-bottom: 18px;
+.form-group {
+  margin-bottom: 16px;
 }
 
-.register-form-section .form-group label {
+.form-group label {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   color: #41485a;
 
   font-size: 12px;
+
   font-weight: 600;
 }
 
-.register-form-section .form-group input {
+.form-group input {
   width: 100%;
-  height: 46px;
+  height: 44px;
 
-  padding: 0 14px;
+  padding: 0 13px;
 
   box-sizing: border-box;
 
@@ -123,51 +125,94 @@
   outline: none;
 
   background: #ffffff;
+
   color: #30364a;
 
   font-family: inherit;
-  font-size: 13px;
+
+  font-size: 12px;
 
   transition: all 0.25s ease;
 }
 
-.register-form-section .form-group input:hover {
+.form-group input:hover {
   border-color: #c8ccd6;
 }
 
-.register-form-section .form-group input:focus {
+.form-group input:focus {
   border-color: #6334d5;
 
   box-shadow: 0 0 0 3px rgba(99, 52, 213, 0.09);
 }
 
-.register-form-section .form-group input::placeholder {
+.form-group input::placeholder {
   color: #a3a8b3;
+}
+
+.form-group select {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe2e9;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #30364a;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.form-group select:hover {
+  border-color: #c8ccd6;
+}
+
+.form-group select:focus {
+  border-color: #6334d5;
+
+  box-shadow: 0 0 0 3px rgba(99, 52, 213, 0.09);
 }
 
 .password-box {
   position: relative;
+
   width: 100%;
 }
 
 .password-box input {
-  padding-right: 65px !important;
+  padding-right: 60px;
 }
 
 .password-toggle {
   position: absolute;
 
   top: 50%;
-  right: 13px;
+  right: 12px;
 
   transform: translateY(-50%);
 
   border: none;
+
   background: transparent;
 
   color: #6334d5;
 
+  font-family: inherit;
+
   font-size: 11px;
+
   font-weight: 600;
 
   cursor: pointer;
@@ -181,20 +226,25 @@
 
 .terms {
   display: flex;
-  align-items: center;
+
+  align-items: flex-start;
 
   gap: 7px;
 
-  margin: 5px 0 20px;
+  margin: 3px 0 18px;
 
   color: #707789;
 
   font-size: 11px;
 
+  line-height: 1.5;
+
   cursor: pointer;
 }
 
 .terms input {
+  margin-top: 2px;
+
   accent-color: #6334d5;
 
   cursor: pointer;
@@ -214,17 +264,20 @@
 
 .register-submit {
   width: 100%;
-  height: 46px;
+  height: 45px;
 
   border: none;
+
   border-radius: 7px;
 
   background: #6334d5;
+
   color: #ffffff;
 
   font-family: inherit;
 
   font-size: 13px;
+
   font-weight: 600;
 
   cursor: pointer;
@@ -245,7 +298,7 @@
 }
 
 .login-text {
-  margin: 22px 0 0;
+  margin: 20px 0 0;
 
   text-align: center;
 
@@ -260,28 +313,59 @@
   text-decoration: none;
 
   font-weight: 600;
+
+  transition: color 0.2s ease;
 }
 
 .login-text a:hover {
+  color: #4e24bd;
+
   text-decoration: underline;
+}
+
+.back-home {
+  display: block;
+
+  margin-top: 12px;
+
+  text-align: center;
+
+  color: #6334d5;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.back-home:hover {
+  color: #4e24bd;
+
+  text-decoration: underline;
+
+  transform: translateY(-1px);
 }
 
 @media (max-width: 950px) {
   .register-container {
     max-width: 900px;
+
     margin: 40px auto;
   }
 
   .register-card {
-    min-height: 600px;
+    min-height: 650px;
   }
 
   .register-image-section {
-    min-height: 600px;
+    min-height: 650px;
   }
 
   .register-form-section {
-    padding: 45px;
+    padding: 40px;
   }
 
   .register-form-section h1 {
@@ -308,12 +392,11 @@
 
   .register-image-section {
     height: 270px;
+
     min-height: 270px;
   }
 
   .register-form-section {
-    height: auto;
-
     padding: 35px 25px;
   }
 
@@ -322,12 +405,17 @@
   }
 
   .register-subtitle {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 
     font-size: 12px;
   }
 
-  .register-form-section .form-group input {
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
     height: 44px;
   }
 
@@ -345,6 +433,7 @@
 
   .register-image-section {
     height: 220px;
+
     min-height: 220px;
   }
 
@@ -360,11 +449,21 @@
     font-size: 11px;
   }
 
+  .form-group label {
+    font-size: 11px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 11px;
+  }
+
   .terms {
     font-size: 10px;
   }
 
-  .login-text {
+  .login-text,
+  .back-home {
     font-size: 11px;
   }
 }

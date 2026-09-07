@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 import loginImage from "../assets/login-image.jpeg";
 import "./Register.css";
@@ -9,7 +8,9 @@ function Register() {
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [accountType, setAccountType] = useState("Customer");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -21,13 +22,18 @@ function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !phone || !email || !password || !confirmPassword) {
       alert("Please fill in all fields.");
       return;
     }
 
     if (name.trim().length < 3) {
       alert("Please enter a valid name.");
+      return;
+    }
+
+    if (phone.trim().length < 10) {
+      alert("Please enter a valid phone number.");
       return;
     }
 
@@ -61,7 +67,9 @@ function Register() {
       "registeredUser",
       JSON.stringify({
         name: name.trim(),
+        phone: phone.trim(),
         email: email.trim(),
+        accountType: accountType,
         password: password,
       }),
     );
@@ -73,8 +81,6 @@ function Register() {
 
   return (
     <div className="register-page">
-      <Navbar />
-
       <main className="register-container">
         <div className="register-card">
           <div className="register-image-section">
@@ -101,6 +107,17 @@ function Register() {
               </div>
 
               <div className="form-group">
+                <label>Phone Number</label>
+
+                <input
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
                 <label>Email</label>
 
                 <input
@@ -109,6 +126,19 @@ function Register() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+              </div>
+
+              <div className="form-group">
+                <label>Account Type</label>
+
+                <select
+                  value={accountType}
+                  onChange={(e) => setAccountType(e.target.value)}
+                >
+                  <option value="Customer">Customer</option>
+
+                  <option value="Professional">Professional</option>
+                </select>
               </div>
 
               <div className="form-group">
@@ -173,6 +203,10 @@ function Register() {
             <p className="login-text">
               Already have an account? <Link to="/login">Login</Link>
             </p>
+
+            <Link to="/" className="back-home">
+              ← Back to Home
+            </Link>
           </div>
         </div>
       </main>
